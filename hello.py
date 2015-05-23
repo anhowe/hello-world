@@ -1,10 +1,12 @@
-print "hello world"
-print "hello"
+#!/usr/bin/python
+from time import sleep
 
-def foo():
+def SecondsSinceDockerStarted():
     i=0
-    while i < 10:
-        print i
+    while True:
+        print "seconds since docker start %d" % (i)
+        sleep(1)
         i=i+1
         
-foo()
+if __name__=="__main__":
+    SecondsSinceDockerStarted()
